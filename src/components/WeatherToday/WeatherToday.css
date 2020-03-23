@@ -1,0 +1,13 @@
+.weather-today {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.city {
+    margin: 10px auto;
+    color: antiquewhite;
+    display: flex;
+    align-items: center;
+}

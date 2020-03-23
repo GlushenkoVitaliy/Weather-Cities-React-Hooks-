@@ -1,0 +1,24 @@
+.weather-app {
+    margin: 15px auto 0 auto;
+    background-color: #889CA6;
+    width: 600px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.header {
+    margin: 10px auto ;
+}
+
+.weather-window {
+    margin: 0 50px 50px;
+    background-color: #315760;
+    width: 500px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
