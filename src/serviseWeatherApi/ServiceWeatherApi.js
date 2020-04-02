@@ -1,3 +1,4 @@
+import moment from 'moment';
 
 export default class ServiseWeatherApi {
 
@@ -24,12 +25,13 @@ export default class ServiseWeatherApi {
     }
 
     _transformData(data) {
-        // const date = new Date(data.dt); 
+        let date = new Date();
+        let dateToday = moment(date).format('dddd, MMM M').toLocaleUpperCase(); 
         return ({
           city: data.name,
-          temperatureDay: data.main.temp,
-          wind: data.wind.speed,
-          date: data.dt
+          temperatureDay: Math.round(data.main.temp),
+          wind: Math.round(data.wind.speed),
+          date: dateToday
         })
     }
 }

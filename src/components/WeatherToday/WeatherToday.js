@@ -11,19 +11,13 @@ const WeatherToday = ({ newCity, onHasError }) => {
   
   const [weatherCity, setWeatherSity] = useState( {} );
 
-  useEffect(() => { getLocationCity(); console.log('did mount')}, []);
+  useEffect(() => { getLocationCity()}, []);
   
   useEffect(() => { 
     if (newCity !== null) {
       getDataByCity(newCity); 
-      console.log('did update') }
+    }
       }, [newCity]);
-
-
-  // - разобраться какие зависимости нужны useEffect
-  // - еще раз просмотреть видео про useCallback and useMemo
-
-
 
   const getLocationCity = () => {
     navigator.geolocation.getCurrentPosition(position =>
@@ -64,9 +58,9 @@ const WeatherToday = ({ newCity, onHasError }) => {
       <div className="city">
         <h2>{city}</h2>
       </div>
-      <div className="date">date {date}</div>
-      <div className="temp">temp {temperatureDay}</div>
-      <div className="wind">wind {wind}</div>
+      <div className="date">{date}</div>
+      <div className="temp">Temperature {temperatureDay} °C</div>
+      <div className="wind">Wind {wind} m/s</div>
        
     </div>
   );
